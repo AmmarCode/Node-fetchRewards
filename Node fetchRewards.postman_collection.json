@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "2220b576-c1fa-457d-87e9-c86499874c99",
+		"name": "Node fetchRewards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST/Node spend points",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"spentPoints\": 5000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/spendpoints",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"spendpoints"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "POST/Node spend points",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"spentPoints\": 5000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/spendpoints",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"spendpoints"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"34-+fYhPFdKSnR4FfLU0z6E7w8J3Yg\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 May 2022 05:24:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"DANNON\": -100,\n    \"UNILEVER\": -200,\n    \"MILLER COORS\": -4700\n}"
+				}
+			]
+		},
+		{
+			"name": "GET/ Node get payer balances",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/getpayerbalances",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getpayerbalances"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET/ Node get payer balances",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/getpayerbalances",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"getpayerbalances"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"30-Y/e2eLq5qrCVPzdCQq0VTXBDYPw\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 May 2022 05:25:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"DANNON\": 1000,\n    \"UNILEVER\": 0,\n    \"MILLER COORS\": 5300\n}"
+				}
+			]
+		},
+		{
+			"name": "POST/Node add transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{ \"payer\": \"DANNON\", \"points\": 100, \"timestamp\": \"2020-11-02T14:00:00Z\" }\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/addTransaction",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"addTransaction"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "POST/Node add transaction",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{ \"payer\": \"DANNON\", \"points\": 100, \"timestamp\": \"2020-11-02T14:00:00Z\" }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/addTransaction",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"addTransaction"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "66"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"42-+By01u3AG2yN6sgH50idyBm65FU\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 May 2022 05:25:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"payer\": \"DANNON\",\n    \"points\": 100,\n    \"timestamp\": \"2020-11-02T14:00:00Z\"\n}"
+				}
+			]
+		}
+	]
+}
